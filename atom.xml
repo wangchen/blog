@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Wangchen blog]]></title>
-  <link href="http://wangchen.github.io/blog//atom.xml" rel="self"/>
-  <link href="http://wangchen.github.io/blog//"/>
-  <updated>2013-09-30T06:07:37+08:00</updated>
-  <id>http://wangchen.github.io/blog//</id>
+  <link href="http://wangchen.org/atom.xml" rel="self"/>
+  <link href="http://wangchen.org/"/>
+  <updated>2013-09-30T06:15:07+08:00</updated>
+  <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
     
