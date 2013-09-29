@@ -3,10 +3,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Hello Octopress &amp; GitHub Pages - Wangchen blog</title>
+	<title>Wangchen blog</title>
     <meta name="author" content="Wang Chen">
     
-	<meta name="description" content="昨天尝试了一下 Heroku , 墙内访问还是很成问题，所以还是回来用 GitHub Pages 吧！ 刚刚过完生日，不像前两年那么多唏嘘、感概，反而多了些坚定，但还是免不了叹一声： 无论如何，我还是成功的蹉跎了一年的时光。 ">
+	<meta name="description" content="Search Results $('#search_results').tapir({ 'token': '', 'complete' : function() { document.getElementById('search_loading').style.display="none &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -78,39 +78,22 @@
 <div id="toload">
 <!-- begin toload --> 
     <div id="content" class="inner">
-        <article class="post">
-	<h2 class="title">Hello Octopress &amp; GitHub Pages</h2>
-	<div class="entry-content"><p>昨天尝试了一下 <a href="http://heroku.com">Heroku</a> , 墙内访问还是很成问题，所以还是回来用 GitHub Pages 吧！</p>
-
-<p>刚刚过完生日，不像前两年那么多唏嘘、感概，反而多了些坚定，但还是免不了叹一声：</p>
-
-<blockquote><p>无论如何，我还是成功的蹉跎了一年的时光。</p></blockquote>
+        <h1 class="entry-title"><center>Search Results</center></h1>
+<div id="search_loading" style="margin: 40px 0">
+    <center><img src="/images/loading.gif"></center>
 </div>
 
-<div class="meta">
-	
+<script type="text/javascript" src="/javascripts/jquery-tapir.js"></script>
+<div id="search_results" style="display:none">
+<br>
 </div>
-</article>
+<script>
+         $('#search_results').tapir({
+             'token': '',
+             'complete' : function() { document.getElementById('search_loading').style.display="none"; }
+         });
+</script>
 
-	<div class="share">
-	<div class="addthis_toolbox addthis_default_style ">
-	
-	
-	<a class="addthis_button_tweet"></a>
-	
-	
-	<a class="addthis_counter addthis_pill_style"></a>
-	</div>
-  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
-</div>
-
-
-
-<section id="comment">
-    <h2 class="title">Comments</h2>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
-</section>
 
     </div>
     <footer id="footer">
@@ -137,10 +120,7 @@
       var disqus_shortname = 'wangchen-blog';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://wangchen.org/blog/2013/09/30/hello-octopress-and-github-pages/';
-        var disqus_url = 'http://wangchen.org/blog/2013/09/30/hello-octopress-and-github-pages/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
