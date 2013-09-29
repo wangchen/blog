@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Grunt | Wangchen blog]]></title>
   <link href="http://wangchen.org/blog/categories/grunt/atom.xml" rel="self"/>
   <link href="http://wangchen.org/"/>
-  <updated>2013-09-30T07:00:08+08:00</updated>
+  <updated>2013-09-30T07:12:33+08:00</updated>
   <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
@@ -18,7 +18,14 @@
     <link href="http://wangchen.org/blog/2013/09/30/grunt-get-start/"/>
     <updated>2013-09-30T06:59:00+08:00</updated>
     <id>http://wangchen.org/blog/2013/09/30/grunt-get-start</id>
-    <content type="html"><![CDATA[<h1>Grunt Javascript 构建工具入门</h1>
+    <content type="html"><![CDATA[<p>Grunt 是一个 JavaScript 的自动化构建工具，它提供的一种方式降低如编译、压缩、发布等重复性劳动。</p>
+
+<p>Grunt 的体系已非常强大，且仍在日益壮大。</p>
+
+<p>我必须得说，jQuery 正在使用它。</p>
+
+<!-- more -->
+
 
 <h2>安装 CLI 命令行工具</h2>
 
