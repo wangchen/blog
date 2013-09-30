@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Javascript | Wangchen blog]]></title>
   <link href="http://wangchen.org/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://wangchen.org/"/>
-  <updated>2013-09-30T22:11:14+08:00</updated>
+  <updated>2013-09-30T22:15:39+08:00</updated>
   <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
@@ -29,8 +29,10 @@
 
 <h2>安装 CLI 命令行工具</h2>
 
-<pre><code>$ npm install -g grunt-cli
-</code></pre>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Install grunt-cli </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm install -g grunt-cli
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <blockquote><p>注意，这里只安装了 <code>grunt-cli</code>, 并非完整的 <code>grunt</code>, 这样允许我们针对不同项目安装不同的版本。</p></blockquote>
 
@@ -116,32 +118,56 @@
 
 <p>在下面的 <code>Gruntfile</code> 中，项目的元数据从 <code>package.json</code> 中导入； 然后使用<code>grunt-contrib-uglify</code> plugin 定义了一个<code>uglify</code> task ，用于压缩源文件并使用项目元数据动态生成banner comment。默认情况下，当运行 <code>grunt</code> 命令时，<code>uglify</code> 任务会被执行。</p>
 
-<pre><code>module.exports = function(grunt) {
-    Project configuration.
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        uglify: {
-            options: {
-                banner: '/*! &lt;%= pkg.name %&gt; &lt;%=grunt.template.today("yyyy-mm-dd") %&gt; */\
-            },
-            build: {
-                src: 'src/&lt;%= pkg.name %&gt;.js',
-                dest: 'build/&lt;%= pkg.name %&gt;.min.js'
-            }
-        }
-});
-</code></pre>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Gruntfile sample </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">Project</span> <span class="nx">configuration</span><span class="p">.</span>
+</span><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+</span><span class='line'>    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">uglify</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>            <span class="nx">banner</span><span class="o">:</span> <span class="s1">&#39;/*! &amp;lt;%= pkg.name %&amp;gt; &amp;lt;%=grunt.template.today(&quot;yyyy-mm-dd&quot;) %&amp;gt; */\</span>
+</span><span class='line'><span class="s1">        },</span>
+</span><span class='line'><span class="s1">        build: {</span>
+</span><span class='line'><span class="s1">            src: &#39;</span><span class="nx">src</span><span class="o">/&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">%=</span> <span class="nx">pkg</span><span class="p">.</span><span class="nx">name</span> <span class="o">%&amp;</span><span class="nx">gt</span><span class="p">;.</span><span class="nx">js</span><span class="s1">&#39;,</span>
+</span><span class='line'><span class="s1">            dest: &#39;</span><span class="nx">build</span><span class="o">/&amp;</span><span class="nx">lt</span><span class="p">;</span><span class="o">%=</span> <span class="nx">pkg</span><span class="p">.</span><span class="nx">name</span> <span class="o">%&amp;</span><span class="nx">gt</span><span class="p">;.</span><span class="nx">min</span><span class="p">.</span><span class="nx">js</span><span class="err">&#39;</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>这是一个完整的 <code>Gruntfile</code>，下面来逐个部分讲解一下。</p>
 
 <h3>&ldquo;wrapper&rdquo; 函数</h3>
 
-<p>每一个 <code>Gruntfile</code> 以及 grunt plugin 都使用这个基本格式，所有的Grunt 代码都必须在这个函数中指定：</p>
-
-<pre><code>module.exports = function(grunt) {
-  // Do grunt-related things in here
-};
-</code></pre>
+<p>每一个 <code>Gruntfile</code> 以及 grunt plugin 都使用这个基本格式，所有的Grunt 代码都必须在这个函数中指定：
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>&ldquo;wrapper&rdquo; </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// Do grunt-related things in here</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3>项目和任务配置</h3>
 
@@ -153,20 +179,40 @@
 
 <p>Task 的配置需要与其同名，这里为 <code>uglify</code> task 设定了 <code>banner</code> 和 <code>build</code> 选项。</p>
 
-<pre><code>// Project configuration.
-grunt.initConfig({
-  pkg: grunt.file.readJSON('package.json'),
-  uglify: {
-    options: {
-      banner: '/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today("yyyy-mm-dd") %&gt; */\n'
-    },
-    build: {
-      src: 'src/&lt;%= pkg.name %&gt;.js',
-      dest: 'build/&lt;%= pkg.name %&gt;.min.js'
-    }
-  }
-});
-</code></pre>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Project and task configuration </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Project configuration.</span>
+</span><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="kr">package</span><span class="p">.</span><span class="nx">json</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;),</span>
+</span><span class='line'>  <span class="nx">uglify</span><span class="o">:</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">banner</span><span class="o">:</span> <span class="s1">&#39;/*! &amp;lt;%= pkg.name %&amp;gt; &amp;lt;%= grunt.template.today(&quot;yyyy-mm-dd&quot;) %&amp;gt; */\n&#39;</span>
+</span><span class='line'><span class="p">},</span>
+</span><span class='line'><span class="nx">build</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src/&amp;lt;%= pkg.name %&amp;gt;.js&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;build/&amp;lt;%= pkg.name %&amp;gt;.min.js&#39;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3>加载Grunt plugin 和 task</h3>
 
@@ -182,21 +228,39 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 
 <p>你可以通过在配置中定义一个 <code>default</code> task 让 Grunt 运行一个或多个 task。下面的例子中，运行 <code>grunt</code> 命令且不指定 task，会默认执行 <code>uglify</code> task。相当于运行 <code>grunt uglify</code> 或者 <code>grunt default</code>。这个数组中可以指定任意数量的 task。</p>
 
-<pre><code>// Default task(s).
-grunt.registerTask('default', ['uglify']);
-</code></pre>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Default task </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Default task(s).</span>
+</span><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="k">default</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="p">[</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">uglify</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;]);</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>如果项目需要一些 Grunt plugin 没有提供的 task，你可以在 <code>Gruntfile</code> 中定义自己的 task。比如下面的例子中，完全自定义了一个 <code>default</code> task，甚至没有使用 task 配置：</p>
 
-<pre><code>module.exports = function(grunt) {
-
-  // A very basic default task.
-  grunt.registerTask('default', 'Log some stuff.', function() {
-    grunt.log.write('Logging some stuff...').ok();
-  });
-
-};
-</code></pre>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Custom task </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="c1">// A very basic default task.</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="k">default</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">Log</span> <span class="nx">some</span> <span class="nx">stuff</span><span class="p">.</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">grunt</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;Logging some stuff...&#39;</span><span class="p">).</span><span class="nx">ok</span><span class="p">();</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="p">});</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>自定义项目级的 task 不必定义在 <code>Gruntfile</code> 中，也可以定义在外部的 <code>.js</code> 文件中，通过 <code>grunt.loadTask</code> 方法加载。</p>
 ]]></content>
