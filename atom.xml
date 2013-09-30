@@ -4,7 +4,7 @@
   <title><![CDATA[Wangchen blog]]></title>
   <link href="http://wangchen.org/atom.xml" rel="self"/>
   <link href="http://wangchen.org/"/>
-  <updated>2013-09-30T22:10:01+08:00</updated>
+  <updated>2013-09-30T22:11:14+08:00</updated>
   <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
@@ -38,9 +38,13 @@
 
 <p>新建项目目录</p>
 
-<pre><code>$ mkdir grunt-example
-$ cd grunt-example
-</code></pre>
+<figure class='code'><figcaption><span>Prepare a new grunt project </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>mkdir grunt-example
+</span><span class='line'><span class="nv">$ </span><span class="nb">cd </span>grunt-example
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>添加两个文件，<code>package.json</code> 和 <code>Grantfile</code></p>
 
