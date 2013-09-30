@@ -4,7 +4,7 @@
   <title><![CDATA[Wangchen blog]]></title>
   <link href="http://wangchen.org/atom.xml" rel="self"/>
   <link href="http://wangchen.org/"/>
-  <updated>2013-09-30T22:18:00+08:00</updated>
+  <updated>2013-09-30T22:18:41+08:00</updated>
   <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
@@ -94,7 +94,7 @@
 
 <figure class='code'><figcaption><span>Install grunt plugin </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'>   <span class="nx">$</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">grunt</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">$</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">grunt</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>
 </span></code></pre></td></tr></table></div></figure>
 
 

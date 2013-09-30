@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Javascript | Wangchen blog]]></title>
   <link href="http://wangchen.org/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://wangchen.org/"/>
-  <updated>2013-09-30T22:18:00+08:00</updated>
+  <updated>2013-09-30T22:18:41+08:00</updated>
   <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
@@ -97,17 +97,7 @@
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Install grunt plugin </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="o">&lt;</span><span class="err">/p&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">pre</span><span class="o">&gt;&lt;</span><span class="nx">code</span><span class="o">&gt;</span><span class="nx">$</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">grunt</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>
-</span><span class='line'><span class="o">&lt;</span><span class="err">/code&gt;&lt;/pre&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">$</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">grunt</span> <span class="o">&amp;</span><span class="nx">mdash</span><span class="p">;</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <blockquote><p><code>--save-dev</code> 告诉NPM 将 <code>grunt</code> 添加到 <code>package.json</code> 的<code>devDepenencies</code> 部分，这些包只能在开发过程中使用，不会包含到分发过程中。</p></blockquote>
