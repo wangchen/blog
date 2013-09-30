@@ -155,8 +155,11 @@ $ npm install &hellip;">
 
 <h3>安装 grunt 和插件</h3>
 
-<pre><code>$ npm install grunt --save-dev
-</code></pre>
+<figure class='code'><figcaption><span>Install grunt plugin </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'>   <span class="nx">$</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">grunt</span> <span class="o">--</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <blockquote><p><code>--save-dev</code> 告诉NPM 将 <code>grunt</code> 添加到 <code>package.json</code> 的<code>devDepenencies</code> 部分，这些包只能在开发过程中使用，不会包含到分发过程中。</p></blockquote>
 
@@ -199,11 +202,11 @@ $ npm install &hellip;">
 </span><span class='line'>        <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
 </span><span class='line'>        <span class="nx">uglify</span><span class="o">:</span> <span class="p">{</span>
 </span><span class='line'>            <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
-</span><span class='line'>                <span class="nx">banner</span><span class="o">:</span> <span class="s1">&#39;/*! &lt;%= pkg.name %&gt; &lt;%=grunt.template.today(&quot;yyyy-mm-dd&quot;) %&gt; */\</span>
-</span><span class='line'><span class="s1">            },</span>
-</span><span class='line'><span class="s1">            build: {</span>
-</span><span class='line'><span class="s1">                src: &#39;</span><span class="nx">src</span><span class="o">/&lt;%=</span> <span class="nx">pkg</span><span class="p">.</span><span class="nx">name</span> <span class="o">%&gt;</span><span class="p">.</span><span class="nx">js</span><span class="s1">&#39;,</span>
-</span><span class='line'><span class="s1">                dest: &#39;</span><span class="nx">build</span><span class="o">/&lt;%=</span> <span class="nx">pkg</span><span class="p">.</span><span class="nx">name</span> <span class="o">%&gt;</span><span class="p">.</span><span class="nx">min</span><span class="p">.</span><span class="nx">js</span><span class="err">&#39;</span>
+</span><span class='line'>                <span class="nx">banner</span><span class="o">:</span> <span class="s1">&#39;/*! &lt;%= pkg.name %&gt; &lt;%=grunt.template.today(&quot;yyyy-mm-dd&quot;) %&gt; */&#39;</span>
+</span><span class='line'>            <span class="p">},</span>
+</span><span class='line'>            <span class="nx">build</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>                <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;src/&lt;%= pkg.name %&gt;.js&#39;</span><span class="p">,</span>
+</span><span class='line'>                <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;build/&lt;%= pkg.name %&gt;.min.js&#39;</span>
 </span><span class='line'>            <span class="p">}</span>
 </span><span class='line'>        <span class="p">}</span>
 </span><span class='line'><span class="p">});</span>
