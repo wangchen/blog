@@ -1,87 +1,98 @@
 
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<title>Grunt Get Start - Wangchen blog</title>
-    <meta name="author" content="Wang Chen">
-    
-	<meta name="description" content="Grunt 是一个 JavaScript 的自动化构建工具，它提供的一种方式降低例如编译、压缩、发布等重复性劳动。 Grunt 的体系已非常强大，且仍在日益壮大。 我必须得说，jQuery 正在使用它。 安装 CLI 命令行工具 Install grunt-cli 1
+  <meta charset="utf-8">
+  <title>Grunt Get Start - Wangchen blog</title>
+  <meta name="author" content="Wang Chen">
+
+  
+  <meta name="description" content="Grunt 是一个 JavaScript 的自动化构建工具，它提供的一种方式降低例如编译、压缩、发布等重复性劳动。 Grunt 的体系已非常强大，且仍在日益壮大。 我必须得说，jQuery 正在使用它。 安装 CLI 命令行工具 Install grunt-cli 1
 $ npm install &hellip;">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
 
-	<link href="/atom.xml" rel="alternate" title="Wangchen blog" type="application/atom+xml">
-	<link rel="canonical" href="">
-	<link href="/favicon.ico" rel="shortcut icon">
-    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Amethysta' rel='stylesheet' type='text/css'>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+  <link rel="canonical" href="http://wangchen.org/blog/2013/09/30/grunt-get-start">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Wangchen blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
-    <script type="text/javascript" src="/javascripts/jquery-tapir.js"></script>
-
-    <!-- remove or comment it to disable ajaxification -->   
-    <script src="/javascripts/ajaxify.js"></script>
-   
-    
-    
+  
 
 </head>
 
-
-<body>
-    <div id="wrapper">
-    <header id="header" class="inner"><!-- for more effects see _animate.scss -->
-<h1 class="animated bounceInDown">
-    <div id="headerbg">
-        Wang Chen
-    </div>
-</h1>
-<br>
-
-<ul id="social-links" style="text-align:center">
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Wangchen blog</a></h1>
   
+    <h2>A blogging framework for hackers.</h2>
   
-  
-  
-  
-  
-  
-  
-</ul>
-
-
-<!-- use full url including 'index.html' for navigation bar if you are using ajax -->
-<ul id="nav">
-	<li id="ajax"><a href="/index.html">Home</a></li>
-	<li id="ajax"><a href="/blog/archives/index.html">Archives</a></li>
-    <li><a href="/atom.xml">RSS</a></li>
-    
-    <li>
-    <div id="dark">
-        <form method="get" action="/search.html" id="search">
-            <input name="query" type="text" placeholder="Search..." x-webkit-speech />
-        </form>
-    </div>
-    </li>
-        
-</ul>
-
-
-
+</hgroup>
 
 </header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:wangchen.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
 
-<div id="toload">
-<!-- begin toload --> 
-    <div id="content" class="inner">
-        <article class="post">
-	<h2 class="title">Grunt Get Start</h2>
-	<div class="entry-content"><p>Grunt 是一个 JavaScript 的自动化构建工具，它提供的一种方式降低例如编译、压缩、发布等重复性劳动。</p>
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Grunt Get Start</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-30T06:59:00+08:00" pubdate data-updated="true">Sep 30<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Grunt 是一个 JavaScript 的自动化构建工具，它提供的一种方式降低例如编译、压缩、发布等重复性劳动。</p>
 
 <p>Grunt 的体系已非常强大，且仍在日益壮大。</p>
 
@@ -316,55 +327,104 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 <p>自定义项目级的 task 不必定义在 <code>Gruntfile</code> 中，也可以定义在外部的 <code>.js</code> 文件中，通过 <code>grunt.loadTask</code> 方法加载。</p>
 </div>
 
-<div class="meta">
-	
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Wang Chen</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-30T06:59:00+08:00" pubdate data-updated="true">Sep 30<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/grunt/'>Grunt</a>, <a class='category' href='/blog/categories/javascript/'>Javascript</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://wangchen.org/blog/2013/09/30/grunt-get-start/" data-via="" data-counturl="http://wangchen.org/blog/2013/09/30/grunt-get-start/" >Tweet</a>
+  
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/09/30/hello-octopress-and-github-pages/" title="Previous Post: Hello Octopress &amp; GitHub Pages">&laquo; Hello Octopress &amp; GitHub Pages</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/10/09/realpath-in-os-x-implemented-by-python/" title="Next Post: Realpath in OS X implemented by Python">Realpath in OS X implemented by Python &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
-	<!-- Baidu Button BEGIN -->
-<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
-<span class="bds_more">分享到：</span>
-<a class="bds_qzone"></a>
-<a class="bds_tsina"></a>
-<a class="bds_tqq"></a>
-<a class="bds_renren"></a>
-<a class="bds_t163"></a>
-<a class="shareCount"></a>
-</div>
-<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6828769" ></script>
-<script type="text/javascript" id="bdshell_js"></script>
-<script type="text/javascript">
-document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
-</script>
-<!-- Baidu Button END -->
-
-
-<section id="comment">
-    <h2 class="title">Comments</h2>
+  <section>
+    <h1>Comments</h1>
     <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-</section>
+  </section>
 
-    </div>
-    <footer id="footer">
-    <div style="display:inline">
-    Copyright &copy; 2013
-
-    Wang Chen
-. Powered by <a href="http://octopress.org">Octopress</a> | 
-    Theme <a href="http://github.com/panks/fabric">fabric</a> by <a href="http://panks.me">Pankaj Kumar</a>
 </div>
 
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/10/09/realpath-in-os-x-implemented-by-python/">Realpath in OS X Implemented by Python</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/30/grunt-get-start/">Grunt Get Start</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/30/hello-octopress-and-github-pages/">Hello Octopress &amp; GitHub Pages</a>
+      </li>
+    
+  </ul>
+</section>
 
-    </footer>
-    <script src="/javascripts/fabric.js"></script>
-<script src="/javascripts/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script> <!-- Delete or comment this line to disable Fancybox -->
 
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Wang Chen -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
 
 <script type="text/javascript">
       var disqus_shortname = 'wangchen-blog';
@@ -383,20 +443,24 @@ document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static
 </script>
 
 
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3eb9f62d278a473ccd7c2ed545bb39b6' type='text/javascript'%3E%3C/script%3E"));
-</script>
 
 
-<!-- end toload --> 
-</div>
-</div>
-<script src="/javascripts/jquery.ui.totop.js" type="text/javascript"></script>
-<script type="text/javascript">
-/*<![CDATA[*/
-;(function($){$().UItoTop({easingType:'easeOutCirc'});})(jQuery); 
-/*]]>*/
-</script><!-- remove it to remove the scroll to top button -->
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
 </body>
 </html>
