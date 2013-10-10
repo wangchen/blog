@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Wangchen blog]]></title>
+  <title><![CDATA[王晨]]></title>
   <link href="http://wangchen.org/atom.xml" rel="self"/>
   <link href="http://wangchen.org/"/>
-  <updated>2013-10-10T12:40:21+08:00</updated>
+  <updated>2013-10-10T13:11:45+08:00</updated>
   <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
@@ -20,7 +20,10 @@
     <id>http://wangchen.org/blog/2013/10/09/realpath-in-os-x-implemented-by-python</id>
     <content type="html"><![CDATA[<p>一个Alias，返回指定文件的绝对路径，适用于Bash、ZSH。</p>
 
-<script src="https://gist.github.com/wangchen/6899975.js"></script>
+<figure class='code'><figcaption><span>realpath.sh </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">alias </span><span class="nv">realpath</span><span class="o">=</span><span class="s1">&#39;python -c &#39;</span><span class="se">\&#39;</span><span class="s1">&#39;import os,sys; print (os.path.abspath(sys.argv[1]) if len(sys.argv)&gt;1 and os.path.exists(sys.argv[1]) else &quot;Invalid path\nUsage: realpath &lt;path&gt;&quot;)&#39;</span><span class="se">\&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
