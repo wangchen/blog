@@ -39,7 +39,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">王晨</a></h1>
   
-    <h2>号庸人 字扰之</h2>
+    <h2>庸人</h2>
   
 </hgroup>
 
@@ -130,6 +130,7 @@
 
     </div>
   </div>
+  <span id="qqLoginBtn"></span>
   <footer role="contentinfo"><p>
   Copyright &copy; 2013 - Wang Chen -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
@@ -174,5 +175,18 @@
 
 
 
+  
+  <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc.js"></script>
+  <script type="text/javascript">
+  	QC.Login.insertButton({
+  		btnId : 'qqLoginBtn',
+  		size : 'B_M',
+  		clientId : '100539307',/*,
+  		scope : '',*/
+  		'btnMode':'showUserAfterLogin'
+
+  	});
+  </script>
+  
 </body>
 </html>
