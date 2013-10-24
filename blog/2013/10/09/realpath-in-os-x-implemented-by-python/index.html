@@ -10,7 +10,7 @@
 
   
   <meta name="description" content="一个Alias，返回指定文件的绝对路径，适用于Bash、ZSH。 realpath.sh 1
-alias realpath=&#39;python -c &#39;\&#39;&#39;import os,sys; print (os.path.abspath(sys.argv[1]) if &hellip;">
+alias realpath=&quot;python -c &#39;import os,sys; print (os.path.abspath(sys.argv[1]) if len(sys.argv &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,7 +97,7 @@ alias realpath=&#39;python -c &#39;\&#39;&#39;import os,sys; print (os.path.absp
 
 <figure class='code'><figcaption><span>realpath.sh </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">alias </span><span class="nv">realpath</span><span class="o">=</span><span class="s1">&#39;python -c &#39;</span><span class="se">\&#39;</span><span class="s1">&#39;import os,sys; print (os.path.abspath(sys.argv[1]) if len(sys.argv)&gt;1 and os.path.exists(sys.argv[1]) else &quot;Invalid path\nUsage: realpath &lt;path&gt;&quot;)&#39;</span><span class="se">\&#39;</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">alias </span><span class="nv">realpath</span><span class="o">=</span><span class="s2">&quot;python -c &#39;import os,sys; print (os.path.abspath(sys.argv[1]) if len(sys.argv)&gt;1 and os.path.exists(sys.argv[1]) else \&quot;Invalid path\nUsage: realpath &lt;path&gt;\&quot;)&#39;&quot;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 </div>
