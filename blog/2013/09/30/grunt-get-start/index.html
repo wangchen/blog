@@ -362,8 +362,10 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wangchen.org/blog/2013/09/30/grunt-get-start/" data-via="" data-counturl="http://wangchen.org/blog/2013/09/30/grunt-get-start/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wangchen.org/blog/2013/09/30/grunt-get-start/" data-via="c1981@me.com" data-counturl="http://wangchen.org/blog/2013/09/30/grunt-get-start/" >Tweet</a>
   
+  
+  <div class="g-plusone" data-size="medium"></div>
   
   
 </div>
@@ -396,6 +398,10 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/11/11/tab-completion-in-python-shell/">Tab completion in Python Shell</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/10/09/realpath-in-os-x-implemented-by-python/">Realpath in OS X implemented by Python</a>
       </li>
     
@@ -410,7 +416,45 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
   </ul>
 </section>
 
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/kitta4587@gmail.com">@kitta4587@gmail.com</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
 
+        github.showRepos({
+            user: 'kitta4587@gmail.com',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/kitta4587@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
 
 
 
@@ -420,7 +464,7 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 
     </div>
   </div>
-  <span id="qqLoginBtn"></span>
+  
   <footer role="contentinfo"><p>
   Copyright &copy; 2013 - Wang Chen -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
@@ -452,6 +496,14 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
 
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
 
 
   <script type="text/javascript">
@@ -467,19 +519,6 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
 
-
-  
-  <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc.js"></script>
-  <script type="text/javascript">
-  	QC.Login.insertButton({
-  		btnId : 'qqLoginBtn',
-  		size : 'B_M',
-  		clientId : '100539307',/*,
-  		scope : '',*/
-  		'btnMode':'showUserAfterLogin'
-
-  	});
-  </script>
   
 </body>
 </html>

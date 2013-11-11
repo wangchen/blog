@@ -2,27 +2,31 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://wangchen.org/blog/2013/09/30/hello-octopress-and-github-pages/</loc>
-        <lastmod>2013-10-16T18:44:21+08:00</lastmod>
+        <lastmod>2013-10-28T16:38:20+08:00</lastmod>
     </url>
     <url>
         <loc>http://wangchen.org/blog/2013/09/30/grunt-get-start/</loc>
-        <lastmod>2013-10-16T18:44:21+08:00</lastmod>
+        <lastmod>2013-10-28T16:38:20+08:00</lastmod>
     </url>
     <url>
         <loc>http://wangchen.org/blog/2013/10/09/realpath-in-os-x-implemented-by-python/</loc>
-        <lastmod>2013-10-24T16:49:55+08:00</lastmod>
+        <lastmod>2013-10-28T16:38:20+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://wangchen.org/blog/2013/11/11/tab-completion-in-python-shell/</loc>
+        <lastmod>2013-11-11T19:38:10+08:00</lastmod>
     </url>
     <url>
         <loc>http://wangchen.org/archives/</loc>
-        <lastmod>2013-10-24T16:49:55+08:00</lastmod>
+        <lastmod>2013-11-11T19:38:10+08:00</lastmod>
     </url>
     <url>
         <loc>http://wangchen.org/blog/archives/</loc>
-        <lastmod>2013-10-24T16:49:55+08:00</lastmod>
+        <lastmod>2013-11-11T19:38:10+08:00</lastmod>
     </url>
     <url>
         <loc>http://wangchen.org/</loc>
-        <lastmod>2013-10-24T16:49:55+08:00</lastmod>
+        <lastmod>2013-11-11T19:38:10+08:00</lastmod>
     </url>
     <url>
         <loc>http://wangchen.org/robots.txt</loc>
@@ -30,6 +34,6 @@
     </url>
     <url>
         <loc>http://wangchen.org/search.html</loc>
-        <lastmod>2013-10-16T18:44:21+08:00</lastmod>
+        <lastmod>2013-10-28T16:38:20+08:00</lastmod>
     </url>
 </urlset>

@@ -5,12 +5,16 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello Octopress &amp; GitHub Pages - 王晨</title>
+  <title>Tab completion in Python Shell - 王晨</title>
   <meta name="author" content="Wang Chen">
 
   
-  <meta name="description" content="昨天尝试了一下 Heroku , 墙内访问还是很成问题，所以还是回来用 GitHub Pages 吧！ 刚刚过完生日，不像前两年那么多唏嘘、感概，反而多了些坚定，但还是免不了叹一声： 无论如何，我还是成功的蹉跎了一年的时光。
-">
+  <meta name="description" content="在你的 home 目录中创建一个 .pythonrc 文件，内容如下： .pythonrc 1
+2
+3
+import rlcompleter, readline
+readline.parse_and_bind(&#39;tab:complete&#39;)
+print &#39;pythonrc &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://wangchen.org/blog/2013/09/30/hello-octopress-and-github-pages">
+  <link rel="canonical" href="http://wangchen.org/blog/2013/11/11/tab-completion-in-python-shell">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="王晨" type="application/atom+xml">
@@ -70,7 +74,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello Octopress &amp; GitHub Pages</h1>
+      <h1 class="entry-title">Tab Completion in Python Shell</h1>
     
     
       <p class="meta">
@@ -86,18 +90,35 @@
   
 
 
-<time datetime="2013-09-30T06:16:00+08:00" pubdate data-updated="true">Sep 30<span>th</span>, 2013</time>
+<time datetime="2013-11-11T19:32:00+08:00" pubdate data-updated="true">Nov 11<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>昨天尝试了一下 <a href="http://heroku.com">Heroku</a> , 墙内访问还是很成问题，所以还是回来用 GitHub Pages 吧！</p>
+<div class="entry-content"><p>在你的 home 目录中创建一个 <code>.pythonrc</code> 文件，内容如下：</p>
 
-<p>刚刚过完生日，不像前两年那么多唏嘘、感概，反而多了些坚定，但还是免不了叹一声：</p>
+<figure class='code'><figcaption><span>.pythonrc </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">rlcompleter</span><span class="o">,</span> <span class="nn">readline</span>
+</span><span class='line'><span class="n">readline</span><span class="o">.</span><span class="n">parse_and_bind</span><span class="p">(</span><span class="s">&#39;tab:complete&#39;</span><span class="p">)</span>
+</span><span class='line'><span class="k">print</span> <span class="s">&#39;pythonrc loaded&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
 
-<blockquote><p>无论如何，我还是成功的蹉跎了一年的时光。</p></blockquote>
+
+<p>设置 <code>PYTHONSTARTUP</code></p>
+
+<p>  $ echo &ldquo;export PYTHONSTARTUP=~/.pythonrc&rdquo; >> ~/.bash_profile</p>
+
+<p>现在你可以试试了：</p>
+
+<p>  $ python</p>
+
+<blockquote><blockquote><blockquote><p>import sys
+sys.<TAB><TAB></p></blockquote></blockquote></blockquote>
 </div>
 
 
@@ -120,7 +141,7 @@
   
 
 
-<time datetime="2013-09-30T06:16:00+08:00" pubdate data-updated="true">Sep 30<span>th</span>, 2013</time>
+<time datetime="2013-11-11T19:32:00+08:00" pubdate data-updated="true">Nov 11<span>th</span>, 2013</time>
       
 
 
@@ -128,7 +149,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wangchen.org/blog/2013/09/30/hello-octopress-and-github-pages/" data-via="c1981@me.com" data-counturl="http://wangchen.org/blog/2013/09/30/hello-octopress-and-github-pages/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wangchen.org/blog/2013/11/11/tab-completion-in-python-shell/" data-via="c1981@me.com" data-counturl="http://wangchen.org/blog/2013/11/11/tab-completion-in-python-shell/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -139,8 +160,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2013/10/09/realpath-in-os-x-implemented-by-python/" title="Previous Post: Realpath in OS X implemented by Python">&laquo; Realpath in OS X implemented by Python</a>
       
-        <a class="basic-alignment right" href="/blog/2013/09/30/grunt-get-start/" title="Next Post: Grunt Get Start">Grunt Get Start &raquo;</a>
       
     </p>
   </footer>
@@ -242,8 +263,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://wangchen.org/blog/2013/09/30/hello-octopress-and-github-pages/';
-        var disqus_url = 'http://wangchen.org/blog/2013/09/30/hello-octopress-and-github-pages/';
+        var disqus_identifier = 'http://wangchen.org/blog/2013/11/11/tab-completion-in-python-shell/';
+        var disqus_url = 'http://wangchen.org/blog/2013/11/11/tab-completion-in-python-shell/';
         var disqus_script = 'embed.js';
       
     (function () {
