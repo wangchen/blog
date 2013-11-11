@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Javascript | 王晨]]></title>
+  <title><![CDATA[Category: Javascript | 庸人]]></title>
   <link href="http://wangchen.org/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://wangchen.org/"/>
-  <updated>2013-11-11T20:11:19+08:00</updated>
+  <updated>2013-11-11T23:00:34+08:00</updated>
   <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
@@ -30,7 +30,7 @@
 <h2>安装 CLI 命令行工具</h2>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Install grunt-cli </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>npm install -g grunt-cli
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -41,7 +41,7 @@
 <p>新建项目目录</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Prepare a new grunt project </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>mkdir grunt-example
 </span><span class='line'><span class="nv">$ </span><span class="nb">cd </span>grunt-example
@@ -65,7 +65,7 @@
 &ndash; 使用下面的模板</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>package.json </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -96,7 +96,7 @@
 <h3>安装 grunt 和插件</h3>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Install grunt plugin </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">$</span> <span class="nx">npm</span> <span class="nx">install</span> <span class="nx">grunt</span> <span class="o">&amp;</span><span class="nx">mdash</span><span class="p">;</span><span class="nx">save</span><span class="o">-</span><span class="nx">dev</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
@@ -121,7 +121,7 @@
 <p>在下面的 <code>Gruntfile</code> 中，项目的元数据从 <code>package.json</code> 中导入； 然后使用<code>grunt-contrib-uglify</code> plugin 定义了一个<code>uglify</code> task ，用于压缩源文件并使用项目元数据动态生成banner comment。默认情况下，当运行 <code>grunt</code> 命令时，<code>uglify</code> 任务会被执行。</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Gruntfile sample </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -163,7 +163,7 @@
 
 <p>每一个 <code>Gruntfile</code> 以及 grunt plugin 都使用这个基本格式，所有的Grunt 代码都必须在这个函数中指定：
 <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>&ldquo;wrapper&rdquo; </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
@@ -182,7 +182,7 @@
 <p>Task 的配置需要与其同名，这里为 <code>uglify</code> task 设定了 <code>banner</code> 和 <code>build</code> 选项。</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Project and task configuration </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -231,7 +231,7 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 <p>你可以通过在配置中定义一个 <code>default</code> task 让 Grunt 运行一个或多个 task。下面的例子中，运行 <code>grunt</code> 命令且不指定 task，会默认执行 <code>uglify</code> task。相当于运行 <code>grunt uglify</code> 或者 <code>grunt default</code>。这个数组中可以指定任意数量的 task。</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Default task </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='js'><span class='line'><span class="c1">// Default task(s).</span>
 </span><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="k">default</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="p">[</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">uglify</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;]);</span>
@@ -240,7 +240,7 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 <p>如果项目需要一些 Grunt plugin 没有提供的 task，你可以在 <code>Gruntfile</code> 中定义自己的 task。比如下面的例子中，完全自定义了一个 <code>default</code> task，甚至没有使用 task 配置：</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Custom task </span></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
