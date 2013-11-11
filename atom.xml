@@ -4,7 +4,7 @@
   <title><![CDATA[王晨]]></title>
   <link href="http://wangchen.org/atom.xml" rel="self"/>
   <link href="http://wangchen.org/"/>
-  <updated>2013-11-11T19:44:41+08:00</updated>
+  <updated>2013-11-11T19:58:09+08:00</updated>
   <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
@@ -18,7 +18,9 @@
     <link href="http://wangchen.org/blog/2013/11/11/tab-completion-in-python-shell/"/>
     <updated>2013-11-11T19:32:00+08:00</updated>
     <id>http://wangchen.org/blog/2013/11/11/tab-completion-in-python-shell</id>
-    <content type="html"><![CDATA[<p>在你的 home 目录中创建一个 <code>.pythonrc</code> 文件，内容如下：</p>
+    <content type="html"><![CDATA[<p>为 <strong>Python Shell</strong> 加入自动补全功能。</p>
+
+<p>在你的 home 目录中创建一个 <code>.pythonrc</code> 文件，内容如下：</p>
 
 <figure class='code'><figcaption><span>.pythonrc </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -32,14 +34,26 @@
 
 <p>设置 <code>PYTHONSTARTUP</code></p>
 
-<p>  $ echo &ldquo;export PYTHONSTARTUP=~/.pythonrc&rdquo; >> ~/.bash_profile</p>
+<figure class='code'><figcaption><span>.pythonrc </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">&quot;export PYTHONSTARTUP=~/.pythonrc&quot;</span> &gt;&gt; ~/.bash_profile
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>现在你可以试试了：</p>
 
-<p>  $ python</p>
+<figure class='code'><figcaption><span>.pythonrc </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>python
+</span><span class='line'>&gt;&gt;&gt; import sys
+</span><span class='line'>&gt;&gt;&gt; sys.&lt;TAB&gt;&lt;TAB&gt;
+</span></code></pre></td></tr></table></div></figure>
 
-<blockquote><blockquote><blockquote><p>import sys
-sys.<TAB><TAB></p></blockquote></blockquote></blockquote>
+
+<blockquote><p>实际上，<code>PYTHONSTARTUP</code> 可以做更多事情，欲求更多者，可参考：
+<a href="https://github.com/sontek/dotfiles/blob/master/_pythonrc.py">https://github.com/sontek/dotfiles/blob/master/_pythonrc.py</a></p></blockquote>
 ]]></content>
   </entry>
   
