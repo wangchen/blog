@@ -4,7 +4,7 @@
   <title><![CDATA[王晨]]></title>
   <link href="http://wangchen.org/atom.xml" rel="self"/>
   <link href="http://wangchen.org/"/>
-  <updated>2013-11-11T19:58:09+08:00</updated>
+  <updated>2013-11-11T20:11:19+08:00</updated>
   <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
@@ -25,10 +25,8 @@
 <figure class='code'><figcaption><span>.pythonrc </span></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-<span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">rlcompleter</span><span class="o">,</span> <span class="nn">readline</span>
 </span><span class='line'><span class="n">readline</span><span class="o">.</span><span class="n">parse_and_bind</span><span class="p">(</span><span class="s">&#39;tab:complete&#39;</span><span class="p">)</span>
-</span><span class='line'><span class="k">print</span> <span class="s">&#39;pythonrc loaded&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
