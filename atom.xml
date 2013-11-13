@@ -4,7 +4,7 @@
   <title><![CDATA[庸人]]></title>
   <link href="http://wangchen.org/atom.xml" rel="self"/>
   <link href="http://wangchen.org/"/>
-  <updated>2013-11-11T23:00:34+08:00</updated>
+  <updated>2013-11-13T20:16:17+08:00</updated>
   <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
@@ -52,6 +52,15 @@
 
 <blockquote><p>实际上，<code>PYTHONSTARTUP</code> 可以做更多事情，欲求更多者，可参考：
 <a href="https://github.com/sontek/dotfiles/blob/master/_pythonrc.py">https://github.com/sontek/dotfiles/blob/master/_pythonrc.py</a></p></blockquote>
+
+<h2>关于OS X 上的问题 Update 2013/11/13</h2>
+
+<p>由于 OS X 中不包括 GNU readline，而是有兼容接口的 BSD libedit。
+OS X 系统自带 Python 以及 Python.org 提供的 32-bit/64-bit installer 包，都是基于 libedit 构建的。
+更详细的解释请参考，StackOverflow 上的一个问题：
+<a href="http://stackoverflow.com/questions/7116038/python-tab-completion-mac-osx-10-7-lion">python tab completion Mac OSX 10.7 (Lion)</a></p>
+
+<p>简单的解决方案就是自己编译一个 Python，推荐 <a href="https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python">HomeBrew</a>。</p>
 ]]></content>
   </entry>
   
