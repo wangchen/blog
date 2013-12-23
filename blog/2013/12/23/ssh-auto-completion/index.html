@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Javascript - 庸人</title>
+  <title>SSH auto completion - 庸人</title>
   <meta name="author" content="Wang Chen">
 
   
-  <meta name="description" content="Category: Javascript">
+  <meta name="description" content="平时要使用很多服务器，刚用 OS X 的几个月，一直很怀念 SecureCRT，直到习惯了下面的方法。 在 /etc/hosts 里面定义一些别名，比如 pgi-1 表示 生产环境的 game 应用的 iPhone 版本的第一个节点服务器。
+在 ~/.ssh/config 中准备配置信息，用户名、 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://wangchen.orgblog/categories/javascript">
+  <link rel="canonical" href="http://wangchen.org/blog/2013/12/23/ssh-auto-completion">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="庸人" type="application/atom+xml">
@@ -64,36 +65,114 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Javascript</h1>
+    
+      <h1 class="entry-title">SSH Auto Completion</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-23T15:27:00+08:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>平时要使用很多服务器，刚用 OS X 的几个月，一直很怀念 SecureCRT，直到习惯了下面的方法。</p>
 
-  
-  <h2>2013</h2>
-
-<article>
-  
-<h1><a href="/blog/2013/09/30/grunt-get-start/">Grunt Get Start</a></h1>
-<time datetime="2013-09-30T06:59:00+08:00" pubdate><span class='month'>Sep</span> <span class='day'>30</span> <span class='year'>2013</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/grunt/'>Grunt</a>, <a class='category' href='/blog/categories/javascript/'>Javascript</a></span>
-</footer>
+<ol>
+<li><p>在 <code>/etc/hosts</code> 里面定义一些别名，比如 <code>pgi-1</code> 表示 生产环境的 game 应用的 iPhone 版本的第一个节点服务器。</p></li>
+<li><p>在 <code>~/.ssh/config</code> 中准备配置信息，用户名、端口、私钥等等。</p></li>
+<li><p>Terminal 中使用，<code>ssh pgi-1</code> 连接了，如果配好了公钥验证，那么密码都不需要了。</p></li>
+</ol>
 
 
-</article>
+<p>最近越发的懒了，而且 ZSH 的 Completion List 确实比 Bash 体验好了很多，于是有了下面的脚本。</p>
 
+<figure class='code'><figcaption><span>ssh.plugin.zsh </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">completion</span><span class="o">=</span><span class="k">$(</span>cat /etc/hosts |grep <span class="s1">&#39;^[^#].*&#39;</span> |awk <span class="s1">&#39;{ print $2 }&#39;</span> |tr <span class="s2">&quot;\\n&quot;</span> <span class="s2">&quot; &quot;</span><span class="k">)</span>
+</span><span class='line'>compctl -k <span class="s2">&quot;$completion&quot;</span> ssh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>我把他丢在 <code>~/.oh-my-zsh/plugins/ssh</code> 下面</p>
+
+<p>然后修改 <code>~/.zshrc</code>， 在 plugin 设置里面加上 ssh</p>
+
+<figure class='code'><figcaption><span>ssh.plugin.zsh </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">plugins</span><span class="o">=(</span>git osx brew ssh<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>现在执行 <code>ssh pg&lt;TAB&gt;</code>，就会自动完成了。执行 <code>ssh pg&lt;TAB&gt;&lt;TAB&gt;</code> 会列出所有生产环境的游戏服务器。</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Wang Chen</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-12-23T15:27:00+08:00" pubdate data-updated="true">Dec 23<span>rd</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/11/11/tab-completion-in-python-shell/" title="Previous Post: Tab completion in Python Shell">&laquo; Tab completion in Python Shell</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 
 </div>
@@ -187,7 +266,10 @@
       var disqus_shortname = 'wangchen-blog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://wangchen.org/blog/2013/12/23/ssh-auto-completion/';
+        var disqus_url = 'http://wangchen.org/blog/2013/12/23/ssh-auto-completion/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
