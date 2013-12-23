@@ -4,7 +4,7 @@
   <title><![CDATA[庸人]]></title>
   <link href="http://wangchen.org/atom.xml" rel="self"/>
   <link href="http://wangchen.org/"/>
-  <updated>2013-12-23T15:38:57+08:00</updated>
+  <updated>2013-12-23T16:21:51+08:00</updated>
   <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
@@ -12,44 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[SSH auto completion]]></title>
-    <link href="http://wangchen.org/blog/2013/12/23/ssh-auto-completion/"/>
-    <updated>2013-12-23T15:27:00+08:00</updated>
-    <id>http://wangchen.org/blog/2013/12/23/ssh-auto-completion</id>
-    <content type="html"><![CDATA[<p>平时要使用很多服务器，刚用 OS X 的几个月，一直很怀念 SecureCRT，直到习惯了下面的方法。</p>
-
-<ol>
-<li><p>在 <code>/etc/hosts</code> 里面定义一些别名，比如 <code>pgi-1</code> 表示 生产环境的 game 应用的 iPhone 版本的第一个节点服务器。</p></li>
-<li><p>在 <code>~/.ssh/config</code> 中准备配置信息，用户名、端口、私钥等等。</p></li>
-<li><p>Terminal 中使用，<code>ssh pgi-1</code> 连接了，如果配好了公钥验证，那么密码都不需要了。</p></li>
-</ol>
-
-
-<p>最近越发的懒了，而且 ZSH 的 Completion List 确实比 Bash 体验好了很多，于是有了下面的脚本。</p>
-
-<figure class='code'><figcaption><span>ssh.plugin.zsh </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">completion</span><span class="o">=</span><span class="k">$(</span>cat /etc/hosts |grep <span class="s1">&#39;^[^#].*&#39;</span> |awk <span class="s1">&#39;{ print $2 }&#39;</span> |tr <span class="s2">&quot;\\n&quot;</span> <span class="s2">&quot; &quot;</span><span class="k">)</span>
-</span><span class='line'>compctl -k <span class="s2">&quot;$completion&quot;</span> ssh
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>我把他丢在 <code>~/.oh-my-zsh/plugins/ssh</code> 下面</p>
-
-<p>然后修改 <code>~/.zshrc</code>， 在 plugin 设置里面加上 ssh</p>
-
-<figure class='code'><figcaption><span>ssh.plugin.zsh </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">plugins</span><span class="o">=(</span>git osx brew ssh<span class="o">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>现在执行 <code>ssh pg&lt;TAB&gt;</code>，就会自动完成了。执行 <code>ssh pg&lt;TAB&gt;&lt;TAB&gt;</code> 会列出所有生产环境的游戏服务器。</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tab completion in Python Shell]]></title>
