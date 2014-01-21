@@ -4,7 +4,7 @@
   <title><![CDATA[庸人]]></title>
   <link href="http://wangchen.org/atom.xml" rel="self"/>
   <link href="http://wangchen.org/"/>
-  <updated>2013-12-23T16:21:51+08:00</updated>
+  <updated>2014-01-21T13:59:20+08:00</updated>
   <id>http://wangchen.org/</id>
   <author>
     <name><![CDATA[Wang Chen]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hacking the QuickLook of OS X]]></title>
+    <link href="http://wangchen.org/blog/2014/01/21/hacking-the-quicklook-of-os-x/"/>
+    <updated>2014-01-21T13:44:00+08:00</updated>
+    <id>http://wangchen.org/blog/2014/01/21/hacking-the-quicklook-of-os-x</id>
+    <content type="html"><![CDATA[<p>QuickLook 是一个快速预览文件内容的功能，相当易用。在 Finder 中，选中文件，按空格键，即可启动。</p>
+
+<p>QuickLook 支持 Plugin，这还有一个专门的插件站点 <a href="http://www.qlplugins.com/">http://www.qlplugins.com/</a>。</p>
+
+<p>Plugin 一般安装在 <code>/Library/QuickLook</code> 或者 <code>~/Library/QuickLook</code> 下，扩展名为 <code>.qlgenerator</code>。</p>
+
+<p>OS X 还提供了一个命令行工具，用于 管理 QuickLook 插件，<code>/usr/bin/qlmanage</code>。</p>
+
+<p>安装过程也很简单，以 Markdown 的插件为例：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>wget <span class="s1">&#39;https://github.com/downloads/toland/qlmarkdown/QLMarkdown-1.3.zip&#39;</span>
+</span><span class='line'><span class="nv">$ </span>tar xvfz QLMarkdown-1.3.zip
+</span><span class='line'><span class="nv">$ </span>cp QLMarkdown/QLMarkdown.qlgenerator ~/Library/QuickLook/
+</span><span class='line'><span class="nv">$ </span>qlmanage -r
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Tab completion in Python Shell]]></title>
